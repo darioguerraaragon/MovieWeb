@@ -183,6 +183,7 @@ article {
 
 .wel-text button {
   background-color: whitesmoke;
+  border-right: solid 1.5px black;
 }
 
 .wel-text button:hover {

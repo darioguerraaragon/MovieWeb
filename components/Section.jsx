@@ -16,16 +16,16 @@ const Section = ({data , dism , text , setdisM , moviesSeries }) => {
           (()=>{
           DiscoverMovie(moviesSeries[0] , setdisM)
           })    
-        }>TopMovies</button> 
+        }>TopPopular</button> 
         <button onClick={
           (()=>{
             DiscoverMovie(moviesSeries[1] , setdisM)
           })
-        }>PopularMovies</button>
+        }>Populars</button>
         <button onClick={(()=>{
           DiscoverMovie(moviesSeries[2] , setdisM)
         })
-        }>UpComingMovies</button>
+        }>UpComing</button>
 
       </div>
 
