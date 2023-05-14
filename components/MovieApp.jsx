@@ -4,7 +4,7 @@ import Section from './Section'
 import {movies} from './helpers/VideosM'
 
 const MovieApp = () => {
-  const [text, settext] = useState('Moust Popular Movies')
+  const [text, settext] = useState('Discover Movies')
 
   const [moviesSeries, setmoviesSeries] = useState(movies)
 
@@ -14,8 +14,19 @@ const MovieApp = () => {
 
   return (
     <div>
-        <Header setData={setData} setdisM={setdisvocerM}  settext={settext} setmoviesSeries={setmoviesSeries}/>
-        <Section data={data} dism={disvocerM} text={text} setdisM={setdisvocerM} moviesSeries={moviesSeries}/>
+        <Header setData={setData} 
+          setdisM={setdisvocerM}  
+          settext={settext} 
+          setmoviesSeries={setmoviesSeries}
+          />
+
+        <Section data={data} 
+          dism={disvocerM} 
+          text={text} 
+          setdisM={setdisvocerM} 
+          moviesSeries={moviesSeries} 
+          settext={settext}
+          />
     </div>
   )
 }

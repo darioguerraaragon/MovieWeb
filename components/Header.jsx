@@ -22,14 +22,14 @@ const Header = ({ setData , setdisM , settext , setmoviesSeries}) => {
     }
     // 
      useEffect(() => {
-         DiscoverMovie(`https://api.themoviedb.org/3/discover/movie?api_key=5039d81fe0701d5eb97f27754ec17b37` , setdisM)
+         DiscoverMovie(`https://api.themoviedb.org/3/movie/now_playing?api_key=5039d81fe0701d5eb97f27754ec17b37` , setdisM)
     }, [])    
     //
 
     return (
         <header>
             <nav>
-                <img className='cinema'/>
+                <img className='cinema' src=''/>
                 <div className='searchNav'>
                     <div className='searchIcon'><img src='./imgs/loupe.png' /></div>
                     <input 
@@ -43,10 +43,10 @@ const Header = ({ setData , setdisM , settext , setmoviesSeries}) => {
                 <div className='infos'>
                         <button className='change' onClick={(()=>{
                             seturl(`https://api.themoviedb.org/3/search/movie?api_key=5039d81fe0701d5eb97f27754ec17b37&query=`)
-                            settext('Moust Popular Movies')
+                            settext('Discover Movies')
                             setData(undefined)
                             setmoviesSeries(movies)
-                            DiscoverMovie(`https://api.themoviedb.org/3/discover/movie?api_key=5039d81fe0701d5eb97f27754ec17b37` , setdisM)
+                            DiscoverMovie( `https://api.themoviedb.org/3/discover/movie?api_key=5039d81fe0701d5eb97f27754ec17b37`, setdisM)
                         })}>Home</button>
 
                         <button className='change' onClick={

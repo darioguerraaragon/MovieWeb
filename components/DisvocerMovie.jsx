@@ -6,7 +6,7 @@ import { HandleVideos } from './helpers/VideosM'
 
 const DisvocerMovie = ({dm}) => {
   const {poster_path , title  , id , overview} = dm
-  // console.log(dm)
+  
   //video branch =>
   const [video, setvideo] = useState([])
   
