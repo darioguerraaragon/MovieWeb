@@ -22,7 +22,7 @@ const Header = ({ setData , setdisM , settext , setmoviesSeries}) => {
     }
     // 
      useEffect(() => {
-         DiscoverMovie(`https://api.themoviedb.org/3/movie/now_playing?api_key=5039d81fe0701d5eb97f27754ec17b37` , setdisM)
+         DiscoverMovie(`https://api.themoviedb.org/3/discover/movie?api_key=5039d81fe0701d5eb97f27754ec17b37` , setdisM)
     }, [])    
     //
 

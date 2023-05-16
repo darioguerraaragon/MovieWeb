@@ -30,7 +30,7 @@ export const movies = [
     `https://api.themoviedb.org/3/movie/popular?api_key=5039d81fe0701d5eb97f27754ec17b37`,
     `https://api.themoviedb.org/3/movie/upcoming?api_key=5039d81fe0701d5eb97f27754ec17b37`,
     `https://api.themoviedb.org/3/movie/now_playing?api_key=5039d81fe0701d5eb97f27754ec17b37`,
-    `https://api.themoviedb.org/3/movie/latest?api_key=5039d81fe0701d5eb97f27754ec17b37`,
+    // `https://api.themoviedb.org/3/movie/latest?api_key=5039d81fe0701d5eb97f27754ec17b37`,
     `https://api.themoviedb.org/3/trending/all/day?api_key=5039d81fe0701d5eb97f27754ec17b37`,
     `https://api.themoviedb.org/3/trending/all/week?api_key=5039d81fe0701d5eb97f27754ec17b37`
 ]
