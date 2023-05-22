@@ -225,3 +225,16 @@ article {
 .tranding .btn1 {
   background-color: rgb(211, 203, 203);  
 }
+
+/* movie infos */
+.MovieInfos {
+  position: absolute;
+  z-index: 3;
+  border: solid black 1px;
+  width: 50px;
+  height: 55px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}

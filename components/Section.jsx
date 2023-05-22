@@ -1,12 +1,21 @@
 import DisvocerMovie from './DisvocerMovie'
 import MoviesCards from './MoviesCards'
 import {DiscoverMovie} from './helpers/VideosM'
+import { useState } from 'react'
 
 const Section = ({data , dism , text , setdisM , moviesSeries , settext }) => { 
   // console.log(data)
-  
+  let btnsH = document.querySelector('#hidde')
+  console.log(btnsH)
+  // const [hidde, sethidde] = useState(false)
+
+  // if(text == 'Tv-Series Section'){
+  //     sethidde(true)
+  //  }
+   
   return (
     <section>
+      {/* {hidde?btnsH.style.display = 'none':btnsH.style.display='block'} */}
       <div className='wel-text'>
 
         <h2>{text}</h2>
@@ -43,14 +52,14 @@ const Section = ({data , dism , text , setdisM , moviesSeries , settext }) => {
           }>{text == 'Tv-Series Section'?'on the air':'Upcoming'}</button>
        </div>
 
-        <div className='cicon'>
+        <div className='cicon' id='hidde'>
           <img src='./iconsMovies/theatre.png'/>
 
           <button onClick={(()=>{
             DiscoverMovie(moviesSeries[3] , setdisM)
             settext('Movies in Theatres')
           })
-          }className='block'>Theatres</button>
+          }>Theatres</button>
         </div>   
 
         <div className='tranding '>

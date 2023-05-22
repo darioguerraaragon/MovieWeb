@@ -3,6 +3,7 @@ import { Link, BrowserRouter } from 'react-router-dom'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import { HandleVideos } from './helpers/VideosM'
+import MovieInfos from './MovieInfos'
 
 const MoviesCards = ({ movie }) => {
   const { title , poster_path  , id , overview } = movie
