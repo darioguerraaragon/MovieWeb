@@ -58,6 +58,10 @@ nav img {
   align-items: center;
 }
 
+.MovieS {
+  color: red;
+}
+
 .searchIcon img {
   width: 50%;
 }
@@ -95,6 +99,8 @@ button:hover {
 .change:hover {
   background-color: transparent;
   cursor: pointer;
+  color: red;
+  transition: all .5s ease;
 }
 
 /* section */
@@ -165,7 +171,7 @@ article {
   flex-flow: row wrap;
   justify-content: space-evenly;
   align-items: center;
-  width: 78%;
+  width: 80%;
   height: 5%;
   margin-top: 1.5%;
   margin-right: 0%;
@@ -177,6 +183,7 @@ article {
   justify-content: center;
   align-items: center;
   width: 10%;
+  /* border-right: solid 1.9px black; */
 }
 
 .cicon img {
@@ -185,6 +192,7 @@ article {
 
 .wel-text button {
   background-color: whitesmoke;
+  border-radius: 6px; 
 }
 
 .wel-text button:hover {
@@ -237,4 +245,14 @@ article {
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+}
+
+/* selects */
+
+select{
+  border: none;
+  border-radius: 5px;
+  background-color: whitesmoke;
+  width: 77%;
+  height: 100%;
 }

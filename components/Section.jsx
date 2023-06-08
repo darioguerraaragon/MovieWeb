@@ -1,21 +1,11 @@
 import DisvocerMovie from './DisvocerMovie'
 import MoviesCards from './MoviesCards'
-import {DiscoverMovie} from './helpers/VideosM'
-import { useState } from 'react'
+import {DiscoverMovie , DiscoverGenersMovies} from './helpers/VideosM'
 
 const Section = ({data , dism , text , setdisM , moviesSeries , settext }) => { 
   // console.log(data)
-  let btnsH = document.querySelector('#hidde')
-  console.log(btnsH)
-  // const [hidde, sethidde] = useState(false)
-
-  // if(text == 'Tv-Series Section'){
-  //     sethidde(true)
-  //  }
-   
   return (
     <section>
-      {/* {hidde?btnsH.style.display = 'none':btnsH.style.display='block'} */}
       <div className='wel-text'>
 
         <h2>{text}</h2>
@@ -61,6 +51,31 @@ const Section = ({data , dism , text , setdisM , moviesSeries , settext }) => {
           })
           }>Theatres</button>
         </div>   
+
+        <div className='cicon'>
+          <img src='./iconsMovies/menu.png'/>
+
+          <select onClick={((e)=>{DiscoverGenersMovies(e.target.value , setdisM)})}>
+            <option>Action</option>
+            <option>Aventure</option>
+            <option>Animation</option>
+            <option>Comedy</option>
+            <option>Crime</option>
+            <option>Documentary</option>
+            <option>Drama</option>
+            <option>Family</option>
+            <option>Fantasy</option>
+            <option>History</option>
+            <option>Horror</option>
+            <option>Music</option>
+            <option>Mystery</option>
+            <option>Romance</option>
+            <option>Science Fiction</option>
+            <option>TV Movie</option>
+            <option>Thriller</option>
+            <option>War</option>
+          </select>
+        </div>
 
         <div className='tranding '>
           <img src='./iconsMovies/trend.png'/>

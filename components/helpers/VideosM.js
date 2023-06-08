@@ -19,6 +19,15 @@ export  const DiscoverMovie = async (rut , setdisM) => {
                         setdisM(res.results)
 }
 
+// genersMovies
+export const DiscoverGenersMovies = (gener , setdisM) => { 
+    fetch(`https://api.themoviedb.org/3/search/tv?api_key=5039d81fe0701d5eb97f27754ec17b37&query=${gener}`)
+                        .then((res)=>{return res.json()})
+                        .then((res)=>{setdisM(res.results)})
+    
+}
+
+
 export const series = [
     `https://api.themoviedb.org/3/tv/top_rated?api_key=5039d81fe0701d5eb97f27754ec17b37`,
     `https://api.themoviedb.org/3/tv/popular?api_key=5039d81fe0701d5eb97f27754ec17b37`,

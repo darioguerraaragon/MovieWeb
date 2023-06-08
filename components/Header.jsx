@@ -29,7 +29,7 @@ const Header = ({ setData , setdisM , settext , setmoviesSeries}) => {
     return (
         <header>
             <nav>
-                <img className='cinema' src=''/>
+                <h2 className='MovieS'>MovieStore</h2>
                 <div className='searchNav'>
                     <div className='searchIcon'><img src='./imgs/loupe.png' /></div>
                     <input 
