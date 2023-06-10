@@ -8,10 +8,10 @@ import MovieInfos from './MovieInfos'
 const DisvocerMovie = ({dm}) => {
   // info movies =>
   const [infos, setinfos] = useState(false)
+  const [cardInfos, secardInfos] = useState()
+  let elements = []
   // 
-
-  const {poster_path , title  , id , overview} = dm
-  
+  const {poster_path , title  , id , overview} = dm 
   //video branch =>
   const [video, setvideo] = useState([])
   
@@ -19,12 +19,17 @@ const DisvocerMovie = ({dm}) => {
     HandleVideos(id , setvideo)
   }, [])
   //
-  //
-
+  console.log(infos)
   return (
     <div className='MovieCard'>
-      {/* <div>{infos?<MovieInfos/>:null}</div> */}
-      <img src={`https://image.tmdb.org/t/p/original${poster_path}`} alt='Something went wrong !'/>
+
+      {infos?<div className='movieInfoWraper'><MovieInfos cardInfos={cardInfos} setinfos={setinfos}/></div>:null}
+
+      <img src={`https://image.tmdb.org/t/p/original${poster_path}`} alt='Something went wrong !' onClick={((e)=>{
+          elements = [title , overview , poster_path]
+          secardInfos(elements)
+          setinfos(true)
+      })}/>
 
       <p><b>{title}</b></p>
 

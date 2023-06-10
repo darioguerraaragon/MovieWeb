@@ -1,11 +1,15 @@
 import DisvocerMovie from './DisvocerMovie'
 import MoviesCards from './MoviesCards'
 import {DiscoverMovie , DiscoverGenersMovies} from './helpers/VideosM'
+import MovieInfos from './MovieInfos'
 
 const Section = ({data , dism , text , setdisM , moviesSeries , settext }) => { 
   // console.log(data)
+
   return (
     <section>
+    {/* <MovieInfos/> */}
+
       <div className='wel-text'>
 
         <h2>{text}</h2>
