@@ -15,18 +15,26 @@ const MoviesCards = ({ movie }) => {
     HandleVideos(id , setvideo)
   }, [id])
   //
+  //infos branchs=>
+  const [infos, setinfos] = useState(false)
+  const [cardInfos, secardInfos] = useState()
+  let elements = []
+  //
   return (
     <div className='MovieCard'>
-      <img src={`https://image.tmdb.org/t/p/original${poster_path}`} alt='Something went wrong !'/>
+
+      {infos?<div className='movieInfoWraper'><MovieInfos cardInfos={cardInfos} setinfos={setinfos}/></div>:null}
+
+      <img src={`https://image.tmdb.org/t/p/original${poster_path}`} alt='Something went wrong !'onClick={((e)=>{
+        elements = [title , overview , poster_path]
+        secardInfos(elements)
+        setinfos(true)
+      })}/>
 
       <p><b>{title}</b></p>
 
-      <div className='Clasificacion' >
-          <div>{overview}</div>
-      </div>
-
       <BrowserRouter>
-        <Link to={`https://www.youtube.com/watch?v=${video}`} target='_blank'>Play</Link>
+        <Link to={`https://www.youtube.com/watch?v=${video}`} target='_blank' className='linkV'><b>Play Trailer</b></Link>
       </BrowserRouter> 
       
     </div>

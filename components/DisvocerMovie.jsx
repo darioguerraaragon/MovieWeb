@@ -19,7 +19,6 @@ const DisvocerMovie = ({dm}) => {
     HandleVideos(id , setvideo)
   }, [])
   //
-  console.log(infos)
   return (
     <div className='MovieCard'>
 
@@ -33,12 +32,8 @@ const DisvocerMovie = ({dm}) => {
 
       <p><b>{title}</b></p>
 
-      <div className='Clasificacion' >
-          <div>{overview}</div>
-      </div>
-
       <BrowserRouter>
-        <Link to={`https://www.youtube.com/watch?v=${video}`} target='_blank'>Play</Link>
+        <Link to={`https://www.youtube.com/watch?v=${video}`} target='_blank' className='linkV'><b>Play Trailer</b></Link>
       </BrowserRouter> 
     
   </div>
