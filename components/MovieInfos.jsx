@@ -4,8 +4,6 @@ const MovieInfos = ({cardInfos , setinfos , details}) => {
 const {release_date , runtime , status , genres} = details
 
   const HandleClose = () => {setinfos(false)}
-  
-  console.log(details)
 
   return (
     <div className='MovieInfos'>

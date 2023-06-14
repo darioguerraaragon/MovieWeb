@@ -1,15 +1,14 @@
 import React from 'react'
 import { DiscoverMovie } from '../components/helpers/VideosM'
 
-const Trending = ({setdisM , settext , moviesSeries}) => {
+const Trending = ({setData , moviesSeries}) => {
   return (
     <div className='cicon'>
           <img src='./iconsMovies/trending.png'/>
 
           <button onClick={
             (()=>{
-              DiscoverMovie(moviesSeries[1] , setdisM)
-              settext('Popular')
+              DiscoverMovie(moviesSeries[1] , setData)
             })
           }>Populars</button>
         </div>

@@ -7,23 +7,19 @@ const MovieApp = () => {
   const [text, settext] = useState('Discover Movies')
 
   const [moviesSeries, setmoviesSeries] = useState(movies)
-
-  const [data, setData] = useState([])
   
-  const [disvocerM, setdisvocerM] = useState([])
+  const [data, setdata] = useState([])
 
   return (
     <div>
-        <Header setData={setData} 
-          setdisM={setdisvocerM}  
+        <Header setData={setdata}  
           settext={settext} 
           setmoviesSeries={setmoviesSeries}
           />
 
         <Section data={data} 
-          dism={disvocerM} 
           text={text} 
-          setdisM={setdisvocerM} 
+          setData={setdata} 
           moviesSeries={moviesSeries} 
           settext={settext}
           />

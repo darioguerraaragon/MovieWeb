@@ -1,12 +1,12 @@
 import React from 'react'
 import { DiscoverGenersMovies } from '../components/helpers/VideosM'
 
-const TvCategorias = ({setdisM}) => {
+const TvCategorias = ({setData}) => {
   return (
     <div className='cicon' id='categorias'>
         <img src='./iconsMovies/menu.png'/>
 
-        <select onClick={((e)=>{DiscoverGenersMovies(e.target.value , setdisM)})}>
+        <select onClick={((e)=>{DiscoverGenersMovies(e.target.value , setData)})}>
           <option>Action</option>
           <option>Aventure</option>
           <option>Animation</option>
