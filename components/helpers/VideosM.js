@@ -43,3 +43,13 @@ export const movies = [
     `https://api.themoviedb.org/3/trending/all/day?api_key=5039d81fe0701d5eb97f27754ec17b37`,
     `https://api.themoviedb.org/3/trending/all/week?api_key=5039d81fe0701d5eb97f27754ec17b37`
 ]
+
+// get details
+
+export const GetDetails = async (id , setdetails) => {
+    const res = await fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=5039d81fe0701d5eb97f27754ec17b37`)
+                                    .then((res)=>{return res.json()})
+                                    .then((res)=>{setdetails(res)})
+                                    // .then((res)=>{console.log(res)})
+    
+}

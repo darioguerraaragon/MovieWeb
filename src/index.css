@@ -12,7 +12,6 @@ header {
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-  /* background-color:rgb(230, 71, 71); */
   background-color: black;
 }
 
@@ -223,7 +222,7 @@ article {
 }
 
 .tranding .btn1 {
-  background-color: rgb(211, 203, 203);  
+  background-color: rgb(211, 203, 203);
 }
 
 /* movie infos */
@@ -290,7 +289,7 @@ article {
 
 .imgDescription .contentDescript {
   width: 50%;
-  height: 60%;
+  height: 80%;
   margin: 0 auto;
   text-align: center;
   display: flex;
@@ -299,9 +298,30 @@ article {
   align-items: center;
 }
 
-.contentDescript div {
+.contentDescript .titleI {
   width: 100%;
   height: 15%;
+}
+
+.contentDescript .release {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.genres {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.genres small {
+  border: solid black 1.5px;
+  border-radius: 8px;
+  padding: 5px;
+  color: greenyellow;
 }
 
 /* selects */
@@ -312,4 +332,10 @@ select{
   background-color: whitesmoke;
   width: 77%;
   height: 100%;
+}
+
+/* hidde categorias */
+
+.hidde {
+  display: none;
 }

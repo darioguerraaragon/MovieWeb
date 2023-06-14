@@ -2,13 +2,14 @@ import React from 'react'
 import { BrowserRouter , Link } from 'react-router-dom'
 import { useState } from 'react'
 import { useEffect } from 'react'
-import { HandleVideos } from './helpers/VideosM'
+import { HandleVideos , GetDetails } from './helpers/VideosM'
 import MovieInfos from './MovieInfos'
 
 const DisvocerMovie = ({dm}) => {
   // info movies =>
   const [infos, setinfos] = useState(false)
   const [cardInfos, secardInfos] = useState()
+  const [details, setdetails] = useState([])
   let elements = []
   // 
   const {poster_path , title  , id , overview} = dm 
@@ -22,12 +23,13 @@ const DisvocerMovie = ({dm}) => {
   return (
     <div className='MovieCard'>
 
-      {infos?<div className='movieInfoWraper'><MovieInfos cardInfos={cardInfos} setinfos={setinfos}/></div>:null}
+      {infos?<div className='movieInfoWraper'><MovieInfos cardInfos={cardInfos} setinfos={setinfos} details={details}/></div>:null}
 
       <img src={`https://image.tmdb.org/t/p/original${poster_path}`} alt='Something went wrong !' onClick={((e)=>{
-          elements = [title , overview , poster_path]
+          elements = [title , overview , poster_path , id]
           secardInfos(elements)
           setinfos(true)
+          GetDetails(elements[3] , setdetails)
       })}/>
 
       <p><b>{title}</b></p>

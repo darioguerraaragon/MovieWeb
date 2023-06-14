@@ -1,105 +1,31 @@
 import DisvocerMovie from './DisvocerMovie'
 import MoviesCards from './MoviesCards'
-import {DiscoverMovie , DiscoverGenersMovies} from './helpers/VideosM'
-import MovieInfos from './MovieInfos'
+import Theatres from '../navigation/Theatres'
+import TopPopular from '../navigation/TopPopular'
+import Trending from '../navigation/Trending'
+import UpComings from '../navigation/UpComings'
+import TvCategorias from '../navigation/TvCategorias'
+import TrendingWeekandDay from '../navigation/TrendingWeekandDay'
 
 const Section = ({data , dism , text , setdisM , moviesSeries , settext }) => { 
   // console.log(data)
-
   return (
     <section>
-    {/* <MovieInfos/> */}
-
       <div className='wel-text'>
 
         <h2>{text}</h2>
 
-        <div className='cicon'>
-          <img src='./iconsMovies/top-games-star.png'/>
-
-          <button onClick={
-            (()=>{
-            DiscoverMovie(moviesSeries[0] , setdisM)
-            settext('Top Popular')
-            })    
-          }>TopPopular</button>
-        </div> 
+        <TopPopular settext={settext} setdisM={setdisM} moviesSeries={moviesSeries}/>
         
-        <div className='cicon'>
-          <img src='./iconsMovies/trending.png'/>
+        <Trending settext={settext} setdisM={setdisM} moviesSeries={moviesSeries}/>
 
-          <button onClick={
-            (()=>{
-              DiscoverMovie(moviesSeries[1] , setdisM)
-              settext('Popular')
-            })
-          }>Populars</button>
-        </div>
+        <UpComings setdisM={setdisM} moviesSeries={moviesSeries} text={text}/>
 
-       <div className='cicon'>
-        <img src='./iconsMovies/soon.png'/>
+        {text == 'Tv-Series Section'?null:<Theatres settext={settext} setdisM={setdisM} moviesSeries={moviesSeries}/>}  
 
-        <button onClick={(()=>{
-            DiscoverMovie(moviesSeries[2] , setdisM)
-            // settext(text)
-          })
-          }>{text == 'Tv-Series Section'?'on the air':'Upcoming'}</button>
-       </div>
+        {text == 'Tv-Series Section'?<TvCategorias setdisM={setdisM}/>:null}  
 
-        <div className='cicon' id='hidde'>
-          <img src='./iconsMovies/theatre.png'/>
-
-          <button onClick={(()=>{
-            DiscoverMovie(moviesSeries[3] , setdisM)
-            settext('Movies in Theatres')
-          })
-          }>Theatres</button>
-        </div>   
-
-        <div className='cicon'>
-          <img src='./iconsMovies/menu.png'/>
-
-          <select onClick={((e)=>{DiscoverGenersMovies(e.target.value , setdisM)})}>
-            <option>Action</option>
-            <option>Aventure</option>
-            <option>Animation</option>
-            <option>Comedy</option>
-            <option>Crime</option>
-            <option>Documentary</option>
-            <option>Drama</option>
-            <option>Family</option>
-            <option>Fantasy</option>
-            <option>History</option>
-            <option>Horror</option>
-            <option>Music</option>
-            <option>Mystery</option>
-            <option>Romance</option>
-            <option>Science Fiction</option>
-            <option>TV Movie</option>
-            <option>Thriller</option>
-            <option>War</option>
-          </select>
-        </div>
-
-        <div className='tranding '>
-          <img src='./iconsMovies/trend.png'/>
-
-            <p>Tranding</p>
-            <div>
-              <button className='btn1' onClick={
-                (()=>{
-                   DiscoverMovie(moviesSeries[4] , setdisM)
-                    settext('Trending-today')
-                })
-                }><b>Today</b></button>
-              <button className='btn2' onClick={
-                (()=>{
-                  DiscoverMovie(moviesSeries[4] , setdisM)
-                  settext('Trending-week')
-                })
-              }><b>Week</b></button>
-            </div>
-         </div>
+        <TrendingWeekandDay setdisM={setdisM} moviesSeries={moviesSeries} settext={settext}/>
       </div>
 
       <div className='row'></div>
