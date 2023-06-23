@@ -257,8 +257,21 @@ article {
   height: 10%;
   display: flex;
   flex-flow: row wrap;
-  justify-content: right;
+  justify-content: space-between;
   align-items: center;
+}
+
+.starContainer {
+  width: 35%;
+  border-right: solid black 1px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.starContainer .star{
+  width: 7.5%;
 }
 
 .close img {

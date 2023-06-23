@@ -30,6 +30,7 @@ const DisvocerMovie = ({dm}) => {
           secardInfos(elements)
           setinfos(true)
           GetDetails(elements[3] , setdetails)
+          console.log(title ,localStorage.stars)
       })}/>
 
       <p><b>{title}</b></p>
