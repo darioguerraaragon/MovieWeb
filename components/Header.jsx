@@ -24,7 +24,7 @@ const Header = ({ setData , settext , setmoviesSeries}) => {
             <nav>
                 <h2 className='MovieS'>MovieStore</h2>
                 <div className='searchNav'>
-                    <div className='searchIcon'><img src='./imgs/loupe.png' /></div>
+                    <img src='./imgs/loupe.png' />
                     <input 
                         className='inputS' 
                         type='text' 

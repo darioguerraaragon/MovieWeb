@@ -1,4 +1,5 @@
 import React from 'react'
+import { useEffect } from 'react'
 
 const MovieInfos = ({cardInfos , setinfos , details}) => {
 const {release_date , runtime , status , genres , title} = details
@@ -57,9 +58,9 @@ const {release_date , runtime , status , genres , title} = details
           <p>{cardInfos[1]}</p>
 
           <div className='genres'>
-            <small></small>
-            <small></small>
-            <small></small>
+            <small>{genres == undefined || genres.name == undefined?null:genres[0].name}</small>
+            <small>{genres == undefined || genres.name == undefined?null:genres[1].name}</small>
+            <small>{genres == undefined || genres.name == undefined?null:genres[2].name}</small>
           </div>
         </div>
       </div>

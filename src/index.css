@@ -30,31 +30,29 @@ nav .searchNav {
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+  border-radius: 20px;
+  background-color: white;
 }
 
 nav img {
   width: 2%;
   border: solid 1px white;
+  border-radius:20px ;
 }
 
 .searchNav input {
   height: 4vh;
-  width: 60%;
+  width: 80%;
   border:none;
+  border-radius: 20px;
 }
 
 .searchNav input:focus {
   outline: none;
 }
 
-.searchIcon {
-  background-color: white;
-  width: 6%;
-  height: 4vh;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
+.searchNav img {
+  width: 4%;
 }
 
 .MovieS {
@@ -69,6 +67,7 @@ button {
   background-color: white;
   padding: 5.5px;
   border: none;
+  border-radius: 20px;
 }
 
 button:hover {
@@ -331,10 +330,9 @@ article {
 }
 
 .genres small {
-  border: solid black 1.5px;
-  border-radius: 8px;
+  font-weight: bold;
   padding: 5px;
-  color: greenyellow;
+  color: black;
 }
 
 /* selects */
